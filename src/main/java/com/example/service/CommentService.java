@@ -1,2 +1,4 @@
-package com.example.service;public interface CommentService {
+package com.example.service;
+
+public interface CommentService {
 }

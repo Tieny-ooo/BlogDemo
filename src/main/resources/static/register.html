@@ -31,13 +31,15 @@
 <div class="container">
     <div class="register-app">
         <div class="header">请注册</div>
-        <div class="form" :rules="rules">
+        <div class="form" >
+            <el-form :model="user" :rules="rules" ref="user">
             <input type="text" name="username" placeholder="用户名" class="input-item">
             <input type="password" name="passowrd" placeholder="密码" class="input-item">
             <input type="text" name="nickname" placeholder="昵称" class="input-item">
             <div class="btn">
-                <a href="login.html">注册</a>
+                <a href="login.html" type="primary" @click="register('user')">注册</a>
             </div>
+            </el-form>
         </div>
         <div class="msg">
             已有账号？
@@ -51,7 +53,7 @@
 
         data() {
             return {
-                form: {
+                user: {
                     username: "",
                     password: "",
                     nickname: "",
@@ -71,7 +73,25 @@
                 }
             };
 
-    }
+    },
+        methods:{
+            login(user){
+                this.$refs[user].validate((valid)=>{
+                    if(valid){
+                        axios.post("/user/register",this.user).then(res=>{
+                            if(res.data.code==200){
+                                window.location.href="login.html"
+                            }else{
+                                this.$message.error(res.data.message)
+                            }
+                        })
+                    }else{
+                        console.log('error message')
+                        return false;
+                    }
+                })
+            }
+        },
     });
 </script>
 

@@ -2,9 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>个人博客中心</title>
+    <script src="https://unpkg.com/vue@2/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        html,body{
+            height: 100%;
+            background-image: url(img/背景.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container{
+            height: calc(100% - 50px);
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container-left{
+            height: 100%;
+            width: 200px;
+
+        }
+        .container-right{
+            height: 100%;
+            width: 750px;
+            overflow: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .card{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .card img{
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+        }
+        .card h3{
+            text-align: center;
+            padding: 10px;
+        }
+        .card .counter{
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .blog{
+            width: 100%;
+            padding: 10px 20px;
+        }
+        .blog .title{
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .blog .desc{
+            color: #000;
+            text-indent: 2em;
+            margin-top: 10px;
+        }
+        .blog .data{
+            color: #008000;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .blog .detail{
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px auto 0 auto;
+            border: 2px solid black;
+            transition: all 0.3s;
+        }
+        .blog .detail:hover{
+            background-color: #000;
+            color: #fff;
+        }
+
+
+    </style>
 </head>
-<body>
+<body style="background-image: url(img/背景.jpg);">
+<div class="app">
+    <img src="img/头像.jpg"  alt="">
+    <span class="title">我的博客中心</span>
+    <span class="spacer"></span>
+    <a href="index.html">主页</a>
+    <a href="edit.html">写博客</a>
+    <a href="login.html">更换账号</a>
+
+</div>
+
+<div class="container">
+    <div class="container-left">
+        <div class="card">
+            <img src="img/头像.jpg" class="avtar" alt="">
+            <h3>Tienyooo</h3>
+            <div class="counter">
+                <span>文章</span>
+                <span>点赞数</span>
+            </div>
+            <div class="counter">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="blog">
+            <div class="title">C语言入门</div>
+            <div class="data">2023.3.1</div>
+            <div class="desc">C语言一经出现就以其功能丰富、表达能力强、灵活方便、应用面广等特点迅速在全世界普及和推广。
+                C语言不但执行效率高而且可移植性好，可以用来开发应用软件、驱动、操作系统等。
+                C语言也是其它众多高级语言的鼻祖语言，所以说学习C语言是进入编程世界的必修课。</div>
+            <a href="  " class="detail">查看全文</a>
+        </div>
+        <div class="blog">
+            <div class="title">Java入门</div>
+            <div class="data">2023.5.1</div>
+            <div class="desc">Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，
+                因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，
+                极好地实现了面向对象理论， 允许程序员以优雅的思维方式进行复杂的编程。</div>
+            <a href="  " class="detail">查看全文</a>
+        </div>
+    </div>
+</div>
+
+
+
 
 </body>
 </html>

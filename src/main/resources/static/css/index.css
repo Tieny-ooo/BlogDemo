@@ -1,0 +1,94 @@
+.toolbar-inside .toolbar-container .toolbar-logo{
+    margin-top: -1px;
+    width: 80px;
+    height: 44px;
+    float: left;
+    margin-right: 8px;
+}
+.toolbar-inside .toolbar-container .toolbar-menus{
+    width: 468.150px;
+    height: 44px;
+    float: left;
+}
+.toolbar-inside .toolbar-container .toolbar-search{
+    float: left;
+    width: 413.862px;
+    height: 30px;
+    margin: 6px 16px 0px 8px;
+}
+.toolbar-inside .toolbar-container .toolbar-btns{
+    float: left;
+    width: 269.987px;
+    height: 44px;
+}
+
+html, body, div, span,a, img,
+ul, li, form
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+ul {
+    list-style: none;
+}
+
+.container-right{
+    float: left;
+    width: 1200px;
+    background-color: yellow;
+    position: relative;
+    left: 20%;
+    height: 100%;
+    opacity: 80%;
+    margin-top: 80px;
+    margin-left: -50px;
+    text-align: center;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.blog{
+    width: 100%;
+    padding: 10px 20px;
+}
+.blog .title{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+}
+.blog .desc{
+    color: #000;
+    text-indent: 2em;
+    margin-top: 10px;
+}
+.blog .data{
+    color: #008000;
+    margin-top: 10px;
+    text-align: center;
+}
+.blog .detail{
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto 0 auto;
+    border: 2px solid black;
+    transition: all 0.3s;
+}
+.blog .detail:hover{
+    background-color: #000;
+    color: #fff;
+}
